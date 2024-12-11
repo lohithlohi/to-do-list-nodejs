@@ -7,10 +7,10 @@ const path = require('path');
 const PORT = 3000;
 
 // Middleware to parse JSON data
-// app.use(express.json());
 // app.use(express.static('public'));
 const app = express();
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 
 const filePath = path.join(__dirname, 'data', 'tasks.json');
